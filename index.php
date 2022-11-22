@@ -13,6 +13,10 @@
 
         $stmt = $conexao->query($query);
         $lista = $stmt->fetchAll(); // fetchAll contem um array com todas as informações da query
+        //$lista = $stmt->fetchAll(PDO::FETCH_ASSOC) ***Define que quer array associativo***
+        //$lista = $stmt->fetchAll(PDO::FETCH_NUM) ***Define que quer array numerico*** 
+        //$lista = $stmt->fetchAll(PDO::FETCH_BOTH) ***Define que quer array com ambos (padrao)*** 
+        //$lista = $stmt->fetchAll(PDO::FETCH_OBJ) ***Define que quer array com objetos e não array de array *** 
 
         echo '<pre>';
             print_r($lista); // mostra todo o retorno do fetchAll
